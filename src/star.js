@@ -11,7 +11,7 @@ export default class Star extends React.Component {
     super(props);
 
     this.state = {
-      fill: this.props.fill || 1,
+			fill: this.props.fill !== null ? this.props.fill : 1,
       width: this.props.width || '32px',
       height: this.props.height || '32px'
     }

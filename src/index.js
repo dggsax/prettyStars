@@ -48,8 +48,9 @@ export default class PrettyStars extends React.Component {
       return <Star
         key={index}
         fill={fillValue}
-        height={'100px'}
-        width={'100px'} />
+        height={this.state.starHeight}
+        width={this.state.starWidth}
+      />
     })
   }
 }
