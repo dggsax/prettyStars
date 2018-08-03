@@ -6,18 +6,20 @@ export default class PrettyStars extends React.Component {
     super(props);
 
     this.state = {
-      actualStars: this.props.actualStars || 5,
+      actualStars: this.props.actualStars !== null ? this.props.actualStars : 5,
       possibleStars: this.props.possibleStars || 5,
       starWidth: this.props.size || '32px',
       starHeight: this.props.size || '32px',
-      starsArray: []
     }
   }
 
-  componentWillMount() {
+  componentDidUpdate() {
+    if (this.props.actualStars !== this.state.actualStars) {
       this.setState({
-          starsArray: this.buildStarsArray()
+        actualStars: this.props.actualStars,
       })
+    }
+    this.render();
   }
 
   buildStarsArray() {
@@ -44,13 +46,18 @@ export default class PrettyStars extends React.Component {
   }
 
   render() {
-    return this.state.starsArray.map((fillValue, index) => {
-      return <Star
-        key={index}
-        fill={fillValue}
-        height={this.state.starHeight}
-        width={this.state.starWidth}
-      />
-    })
+    return (
+      <div>
+        {
+          this.buildStarsArray().map((fillValue) => {
+            return <Star
+              key={Math.random()}
+              fill={fillValue}
+              height={this.state.starHeight}
+              width={this.state.starWidth} />
+          })
+        }
+      </div>
+    )
   }
 }
