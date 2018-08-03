@@ -1,0 +1,25 @@
+{
+  "name": "prettystars",
+  "version": "1.0.0",
+  "description": "A simple node module to generate stars that can be partially filled",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dggsax/prettyStars.git"
+  },
+  "keywords": [
+    "Node",
+    "Stars",
+    "Pretty",
+    "SVG"
+  ],
+  "author": "Daniel \"Gonzo\" Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dggsax/prettyStars/issues"
+  },
+  "homepage": "https://github.com/dggsax/prettyStars#readme"
+}
