@@ -24,9 +24,8 @@
     "url": "https://github.com/dggsax/prettyStars/issues"
   },
   "homepage": "https://github.com/dggsax/prettyStars#readme",
-  "dependencies": {
-    "react": "^16.4.2",
-    "webpack": "^4.16.4"
+  "peerDependencies": {
+    "react": "^16.x"  
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -35,6 +34,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "webpack": "^4.16.5",
     "webpack-command": "^0.4.1"
   }
 }
